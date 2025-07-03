@@ -1,0 +1,13 @@
+# Core Django framework
+Django==5.2.3
+
+# Django REST Framework for API development
+djangorestframework==3.15.2
+
+# JWT Authentication for Django REST Framework
+djangorestframework-simplejwt==5.3.0
+
+# API documentation with Swagger/OpenAPI
+drf-spectacular==0.27.2
+
+setuptools>=65.0
