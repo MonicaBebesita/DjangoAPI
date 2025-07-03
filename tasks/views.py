@@ -81,15 +81,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             status.HTTP_401_UNAUTHORIZED: {"description": "No autenticado."},
             status.HTTP_404_NOT_FOUND: {"description": "Tarea no encontrada o no pertenece al usuario autenticado."}
         },
-        parameters=[
-            OpenApiParameter(
-                name="pk",
-                type=int,
-                location=OpenApiParameter.PATH,
-                description="ID de la tarea a recuperar.",
-                required=True,
-            ),
-        ],
+
         examples=[
             OpenApiExample(
                 "Ejemplo de respuesta exitosa",
@@ -113,15 +105,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             status.HTTP_401_UNAUTHORIZED: {"description": "No autenticado."},
             status.HTTP_404_NOT_FOUND: {"description": "Tarea no encontrada o no pertenece al usuario autenticado."}
         },
-        parameters=[
-            OpenApiParameter(
-                name="pk",
-                type=int,
-                location=OpenApiParameter.PATH,
-                description="ID de la tarea a actualizar.",
-                required=True,
-            ),
-        ],
+
         examples=[
             OpenApiExample(
                 "Ejemplo de solicitud para marcar tarea como completada",
@@ -151,15 +135,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             status.HTTP_401_UNAUTHORIZED: {"description": "No autenticado."},
             status.HTTP_404_NOT_FOUND: {"description": "Tarea no encontrada o no pertenece al usuario autenticado."}
         },
-        parameters=[
-            OpenApiParameter(
-                name="pk",
-                type=int,
-                location=OpenApiParameter.PATH,
-                description="ID de la tarea a actualizar.",
-                required=True,
-            ),
-        ],
+
         examples=[
             OpenApiExample(
                 "Ejemplo de solicitud de actualización completa",
@@ -187,15 +163,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             status.HTTP_401_UNAUTHORIZED: {"description": "No autenticado."},
             status.HTTP_404_NOT_FOUND: {"description": "Tarea no encontrada o no pertenece al usuario autenticado."}
         },
-        parameters=[
-            OpenApiParameter(
-                name="pk",
-                type=int,
-                location=OpenApiParameter.PATH,
-                description="ID de la tarea a eliminar.",
-                required=True,
-            ),
-        ],
+
     )
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
